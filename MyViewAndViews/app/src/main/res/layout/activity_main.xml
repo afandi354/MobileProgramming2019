@@ -177,6 +177,7 @@
                 android:text="@string/ajakan"/>
         </RelativeLayout>
         <Button
+            android:id="@+id/btn_donasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_layout"
