@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/horizontal_layout"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    tools:context=".ProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/vertical_layout"
+        android:src="@drawable/afandi"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#448AFF"
+        android:layout_marginBottom="@dimen/vertical_layout" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/horizontal_layout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="Nama"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/afandi"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="NIP"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="199004112019031014"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="TTL"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11 April 1990"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="Jurusan"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="S2 Ilmu Komputer"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="Cita-cita"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginRight="@dimen/horizontal_layout"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jadi Dosen"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
