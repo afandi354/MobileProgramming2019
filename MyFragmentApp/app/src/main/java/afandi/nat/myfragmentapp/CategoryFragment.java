@@ -1,6 +1,5 @@
 package afandi.nat.myfragmentapp;
 
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
