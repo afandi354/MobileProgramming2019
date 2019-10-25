@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if(getSupportActionBar() != null){
-            getSupportActionBar().setTitle("HM & UKM Polines");
+            getSupportActionBar().setTitle("Himpunan Mahasiswa ITTP");
         }
 
         rvHmj = findViewById(R.id.rv_hmj);
