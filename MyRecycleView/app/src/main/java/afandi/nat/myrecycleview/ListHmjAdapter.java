@@ -16,6 +16,15 @@ import java.util.ArrayList;
 
 public class ListHmjAdapter extends RecyclerView.Adapter<ListHmjAdapter.ListViewHolder> {
     private ArrayList<Hmj> listHmj;
+    private OnItemClickCallback onItemClickCallback;
+
+    public interface OnItemClickCallback{
+        void onItemClicked(Hmj data);
+    }
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback;
+    }
 
     public ListHmjAdapter(ArrayList<Hmj> list){
         this.listHmj = list;
@@ -29,7 +38,7 @@ public class ListHmjAdapter extends RecyclerView.Adapter<ListHmjAdapter.ListView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Hmj hmj = listHmj.get(position);
 
         Glide.with(holder.itemView.getContext())
@@ -39,6 +48,13 @@ public class ListHmjAdapter extends RecyclerView.Adapter<ListHmjAdapter.ListView
 
         holder.tvName.setText(hmj.getName());
         holder.tvDesc.setText(hmj.getDescription());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(listHmj.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override

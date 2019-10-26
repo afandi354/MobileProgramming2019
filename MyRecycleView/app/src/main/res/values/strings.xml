@@ -3,6 +3,8 @@
 
     <string name="hmj_name">Himpunan Mahasiswa ITTP</string>
     <string name="description">Deskripsi</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
 
     <string-array name="data_name">
         <item>HMSE</item>
