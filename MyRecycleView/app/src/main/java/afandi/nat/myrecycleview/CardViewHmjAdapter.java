@@ -1,5 +1,6 @@
 package afandi.nat.myrecycleview;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,16 @@ import java.util.ArrayList;
 
 public class CardViewHmjAdapter extends RecyclerView.Adapter<CardViewHmjAdapter.CardViewViewHolder> {
     private ArrayList<Hmj> listHmj;
+    private OnItemClickCallback<Hmj> onItemClickCallback;
 
     public CardViewHmjAdapter(ArrayList<Hmj> list) {
         this.listHmj = list;
     }
+
+    public void setOnItemClickCallback(OnItemClickCallback<Hmj> onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
 
     @NonNull
     @Override
@@ -39,8 +46,8 @@ public class CardViewHmjAdapter extends RecyclerView.Adapter<CardViewHmjAdapter.
                 .apply(new RequestOptions().override(350, 550))
                 .into(holder.imgPhoto);
 
-        holder.tvName.setText(hmj.getName());
-        holder.tvDesc.setText(hmj.getDescription());
+        holder.tvName.setText(listHmj.get(position).getName());
+        holder.tvDesc.setText(listHmj.get(position).getDescription());
 
         holder.btnFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +56,7 @@ public class CardViewHmjAdapter extends RecyclerView.Adapter<CardViewHmjAdapter.
                         listHmj.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
             }
         });
+
         holder.btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +68,8 @@ public class CardViewHmjAdapter extends RecyclerView.Adapter<CardViewHmjAdapter.
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Kamu memilih "+listHmj.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                Hmj hmj = listHmj.get(holder.getAdapterPosition());
+                onItemClickCallback.onItemClicked(hmj);
             }
         });
     }

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -86,14 +88,14 @@ public class MainActivity extends AppCompatActivity {
     public ArrayList<Hmj> getListHmj() {
         String[] dataName = getResources().getStringArray(R.array.data_name);
         String[] dataDescription = getResources().getStringArray(R.array.data_description);
-        String[] dataPhoto = getResources().getStringArray(R.array.photo);
+        TypedArray dataPhoto = getResources().obtainTypedArray(R.array.photo);
 
         ArrayList<Hmj> listHmj = new ArrayList<>();
         for (int i = 0; i < dataName.length; i++){
             Hmj hmj = new Hmj();
             hmj.setName(dataName[i]);
             hmj.setDescription(dataDescription[i]);
-            hmj.setPhoto(dataPhoto[i]);
+            hmj.setPhoto(dataPhoto.getResourceId(i, 0));
 
             listHmj.add(hmj);
         }
@@ -117,6 +119,15 @@ public class MainActivity extends AppCompatActivity {
         rvHmj.setLayoutManager(new LinearLayoutManager(this));
         CardViewHmjAdapter cardViewHmjAdapter = new CardViewHmjAdapter(list);
         rvHmj.setAdapter(cardViewHmjAdapter);
+
+        cardViewHmjAdapter.setOnItemClickCallback(new OnItemClickCallback<Hmj>(){
+            @Override
+            public void onItemClicked(Hmj hmj){
+                Intent detailHmj = new Intent(MainActivity.this, DetailHmjActivity.class);
+                detailHmj.putExtra(DetailHmjActivity.EXTRA_NAME, hmj);
+                startActivity(detailHmj);
+            }
+        });
     }
 
     @Override

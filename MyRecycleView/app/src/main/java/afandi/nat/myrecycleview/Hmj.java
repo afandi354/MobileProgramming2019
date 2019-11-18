@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Hmj implements Parcelable {
     private String name;
     private String description;
-    private String photo;
+    private int photo;
 
     public String getName() {
         return name;
@@ -24,11 +24,11 @@ public class Hmj implements Parcelable {
         this.description = description;
     }
 
-    public String getPhoto() {
+    public int getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(int photo) {
         this.photo = photo;
     }
 
@@ -41,7 +41,7 @@ public class Hmj implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeString(this.description);
-        dest.writeString(this.photo);
+        dest.writeInt(this.photo);
     }
 
     Hmj(){
@@ -51,7 +51,7 @@ public class Hmj implements Parcelable {
     private Hmj(Parcel in) {
         this.name = in.readString();
         this.description = in.readString();
-        this.photo = in.readString();
+        this.photo = in.readInt();
     }
 
     public static final Parcelable.Creator<Hmj> CREATOR = new Parcelable.Creator<Hmj>() {
