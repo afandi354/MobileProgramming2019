@@ -1,5 +1,17 @@
 # Praktikum Pemrograman Perangkat Bergerak 2019
 
-![Processing Data](https://user-images.githubusercontent.com/10812410/68446881-9f166a00-0210-11ea-8512-82fd81f338d3.jpg)
+1. Membuat biodata sederhana
+2. Mengimplementasikan penggunaan Intent
+3. Memahami View & ViewGroup Android
+4. Membuat Form Login & Register
+5. Membuat Aplikasi dengan Icon di ActionBar
+6. Membuat Fragment di Android
+7. Membuat Aplikasi yang menerapkan RecyclerView
+8. Menerapkan Localization 
+9. Menggunakan AsyncTask di Android
+10. Menggunakan Loader di Android
+11. Menggunakan ViewModel 
+12. Membuat Aplikasi dengan Database SQLite
+13. Membuat Aplikasi dengan Real-Time Database Firebase
 
-![CameraZOOM-20140914095451553](https://user-images.githubusercontent.com/10812410/68742360-9368e000-0622-11ea-8938-4512f8d6af84.jpg)
+>Lihat source code nya saja, jangan di open project sebab versi android studio selalu update 
