@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+   <FrameLayout
+       android:id="@+id/frame_Top"
+       android:layout_width="match_parent"
+       android:layout_height="200dp"
+       android:background="@drawable/banner">
+
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="center"
+          android:src="@drawable/ittp" />
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="left">
+      </androidx.appcompat.widget.Toolbar>
+
+   </FrameLayout>
+
+
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/card_Title"
+       android:layout_width="300dp"
+       android:layout_height="60dp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="170dp"
+       app:cardCornerRadius="10dp">
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@drawable/bg_card"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:text="Himpunan Mahasiswa Telkom"
+          android:textStyle="bold"
+          android:textColor="#000"
+          android:textSize="20sp" />
+
+   </androidx.cardview.widget.CardView>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rv_hmj"
+       android:layout_marginTop="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/card_Title"
+       tools:listitem="@layout/item_card_hmj">
+
+   </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
+
+
+
+
+
